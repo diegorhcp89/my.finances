@@ -12,8 +12,8 @@
     <body>
 
         <header>
-            <h1 id="logo">My Finance$</h1>
-            <!-- <img src="./assets/logo.svg" alt="Logo My Finance"> -->
+            <!-- <h1 id="logo">My Finance$</h1> -->
+            <img src="./assets/logo.svg" alt="Logo My Finance">
         </header>
 
         <main class="container">
@@ -28,7 +28,7 @@
                         </span>
                         <img src="./assets/income.svg" alt="Imagem de entradas">
                     </h3>
-                    <p>R$ 5.000,00</p>
+                    <p id="incomeDisplay">R$ 5.000,00</p>
                 </div>
 
                 <div class="card">
@@ -38,7 +38,7 @@
                         </span>
                         <img src="./assets/expense.svg" alt="Imagem de saidas">
                     </h3>
-                    <p>R$ 2.000,00</p>
+                    <p id="expenseDisplay">R$ 2.000,00</p>
                 </div>
                 <div class="card total">
                 <h3>
@@ -47,7 +47,7 @@
                     </span>
                     <img src="./assets/total.svg" alt="Imagem de total">
                 </h3>
-                    <p>R$ 3.000,00</p>
+                    <p id="totalDisplay">R$ 3.000,00</p>
                 </div>
 
             </section>
@@ -55,7 +55,9 @@
             <section id="transaction">
                 <h2 class="sr-only">Transações</h2>
 
-                <a href="#" class="button new">+ Nova Transação</a>
+                <a href="#" 
+                onclick="Modal.action()"
+                class="button new">+ Nova Transação</a>
 
                 <table id="data-table">
                     <thead>
@@ -67,30 +69,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="description">Luz</td>
-                            <td class="expense">- R$ 500,00</td>
-                            <td class="date">23/01/2021</td>
-                            <td>
-                                <img src="./assets/minus.svg" alt="Remover transação">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="description">Criação Website</td>
-                            <td class="income">- R$ 5.000,00</td>
-                            <td class="date">23/01/2021</td>
-                            <td>
-                                <img src="./assets/minus.svg" alt="Remover transação">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="description">Intenet</td>
-                            <td class="expense">- R$ 200,00</td>
-                            <td class="date">23/01/2021</td>
-                            <td>
-                                <img src="./assets/minus.svg" alt="Remover transação">
-                            </td>
-                        </tr>
                     </tbody>
                 </table>
             </section>
@@ -124,7 +102,7 @@
                                 id="amount"
                                 placeholder="0,00"
                             />
-                            <small class="help">Use o sinal - (negatico) para despesas e , (virgula) para casas decimais</small>
+                            <small class="help">Use o sinal - (negativo) para despesas e , (virgula) para casas decimais</small>
                         </div>
 
                         <div class="input-group">
@@ -139,7 +117,9 @@
                         </div>
 
                         <div class="input-group actions">
-                            <a href="#" class="button cancel">Cancelar</a>
+                            <a 
+                            onclick="Modal.action()"
+                            href="#" class="button cancel">Cancelar</a>
                             <button>Salvar</button>
                         </div>
                     </form>
@@ -147,6 +127,14 @@
             </div>
         </div>
 
-        <footer><p>Feito por Diego do Amaral&copy;</p></footer>
+        <footer>
+            <p>
+                Feito por Diego do Amaral&copy;<br>
+                Desenvolvido na Maratona Discover - Rocketseat.
+            </p>
+        </footer>
+
+        
+       <script src="./scripts.js"></script>
     </body>
 </html>
