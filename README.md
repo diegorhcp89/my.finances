@@ -7,9 +7,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
     HTML
     CSS
-    CSS fonts
-    CSS tricks
-    CSS prefix
     JavaScript
 
 💻 Projeto
